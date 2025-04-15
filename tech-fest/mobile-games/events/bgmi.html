@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="events-page.css">
+    <title>BGMI</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Content -->
+        <div class="left-section">
+            <h1>BGMI - Battle Grounds Mobile India</h1>
+            <h2>Rules and Regulations</h2>
+            <ul class="rules-list">
+                <li>All players must join the match within the designated time.</li>
+                <li>Players must remain in the game until the match ends.</li>
+                <li>No use of third-party tools or hacks; fair play is required.</li>
+                <li>Respect your teammates and opponents during the game.</li>
+                <li>The player with the most kills or the last survivor wins.</li>
+                <li>In case of any disputes, the organizers' decision is final.</li>
+                <li>REGISTRATION FEE - 40 per Team</li>
+                <li>PRIZE POOL - 400 </li>
+            </ul>
+            <!--
+            <div class="agreement">
+                <label>
+                    <input type="checkbox" id="agree-checkbox">
+                    <span>I have read all the rules and regulations and will follow them.</span>
+                </label>
+            </div>
+            <button id="pay-online-button" class="button" disabled>Pay Online</button>
+            <button id="pay-offline-button" class="button" style="margin-top: 10px;" disabled>Pay Offline</button>
+        </div>
+        -->
+
+  <div class="agreement">
+                <label>
+                   <!-- <input type="checkbox" id="agree-checkbox">
+                    <span>I have read all the rules and regulations and will follow them.</span>
+                    -->
+                </label>
+            </div>
+           <!-- <button id="register-button" class="button">REGISTER</button>
+            -->
+            <button class="button" disabled>REGISTRATION CLOSED</button>        </div>
+            
+        <!-- Right Image -->
+        <div class="right-section">
+            <img src="../../../IMAGES4/bgmi.jpeg" alt="bgmi">
+        </div>
+    </div>
+    <script>
+        const checkbox = document.getElementById("agree-checkbox");
+        const payOnlineButton = document.getElementById("pay-online-button");
+        const payOfflineButton = document.getElementById("pay-offline-button");
+
+        checkbox.addEventListener("change", function () {
+            payOnlineButton.disabled = !this.checked;
+            payOfflineButton.disabled = !this.checked;
+        });
+
+        payOnlineButton.addEventListener("click", function () {
+            window.location.href = `https://celeste-25.github.io/KITS-Fest/payment/upi/vipin.html?event=${encodeURIComponent(document.querySelector('h1').innerText)}`;
+        });
+
+        payOfflineButton.addEventListener("click", function () {
+            window.location.href = `https://celeste-25.github.io/KITS-Fest/payment/tech-fest/mobile/bgmi-reg-offline.html?event=${encodeURIComponent(document.querySelector('h1').innerText)}`;
+        });
+    </script>
+    <script src="event-page.js" ></script>
+</body>
+</html>
