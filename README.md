@@ -13,30 +13,32 @@ A dynamic and user-friendly event registration platform developed for the offici
 ## 📸 Screenshots
 
 ### 🏠 Home Page  
+![Image](https://github.com/user-attachments/assets/9c7649e7-5e9e-4a1c-a2b7-ef0458f9381f)
 
 ---
 
 ### 💡 Tech Fest (Main Category)  
-*Add image link here*
+![Image](https://github.com/user-attachments/assets/b9bae41e-d975-44dd-b377-398eaab1e855)
 
 ---
 
 ### 🗺️ Treasure Hunt (Tech Fest Event Page)  
+![Image](https://github.com/user-attachments/assets/30b6da62-0760-45c4-9aaf-89565bd52cd4)
 
 ---
 
 ### 💳 Payment Methods Page  
-*Add image link here*
+![Image](https://github.com/user-attachments/assets/c809af5f-5e86-4c38-b1c2-6be3549b0ac9)
 
 ---
 
 ### 📝 Registration Form  
-*Add image link here*
+![Image](https://github.com/user-attachments/assets/b5cdd3c1-eded-4c4c-86dc-a6ac78f6429c)
 
 ---
 
 ### 📄 Google Sheets (Live Data Capture Example)  
-*Add image link here*
+![Image](https://github.com/user-attachments/assets/d2984073-708d-45b3-ad55-2d0a6402d90b)
 
 ---
 
@@ -77,10 +79,3 @@ A dynamic and user-friendly event registration platform developed for the offici
 ## ⚠️ Usage Notice
 
 This project is for **college use only**. Do not copy, reproduce, or distribute without the developer’s permission.
-
-![Image](https://github.com/user-attachments/assets/d2984073-708d-45b3-ad55-2d0a6402d90b)
-![Image](https://github.com/user-attachments/assets/b5cdd3c1-eded-4c4c-86dc-a6ac78f6429c)
-![Image](https://github.com/user-attachments/assets/c809af5f-5e86-4c38-b1c2-6be3549b0ac9)
-![Image](https://github.com/user-attachments/assets/b9bae41e-d975-44dd-b377-398eaab1e855)
-![Image](https://github.com/user-attachments/assets/30b6da62-0760-45c4-9aaf-89565bd52cd4)
-![Image](https://github.com/user-attachments/assets/9c7649e7-5e9e-4a1c-a2b7-ef0458f9381f)
