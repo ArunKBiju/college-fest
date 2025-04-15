@@ -1,0 +1,274 @@
+body {
+  background: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow-x: hidden;
+  height: 100vh;
+  font-family: "Rubik Distressed", monospace;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;  /* Add z-index to ensure content is above the background */
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://i.ibb.co/MVrs4tP/pc-games.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 1;
+  filter: none;
+  z-index: -1;  /* Ensure the background is behind the content */
+}
+
+.p-div {
+  font-family: monospace;
+  font-size: 48px;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 120px;
+  z-index: 2;  /* Ensure content appears above the background */
+  position: relative;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 250px;
+  height: 150px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: monospace;
+  font-weight: bolder;
+  z-index: 2;  /* Ensure content appears above the background */
+}
+
+.btn-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  z-index: 2;  /* Ensure content appears above the background */
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .btn-position {
+    flex-direction: column;
+  }
+}
+
+.back-to-home {
+  margin-top: 50px;
+  z-index: 2;  /* Ensure content appears above the background */
+  position: relative;
+}
+
+.to-home {
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  z-index: 2;  /* Ensure content appears above the background */
+  position: relative;
+}
+
+.to-home:hover {
+  background-color: rgb(0, 255, 255);
+  padding: 20px;
+  border-radius: 32px;
+  color: #000;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  border: 1px solid #fff;
+  opacity: 90%;
+}
+
+.prev-btn {
+  display: flex;
+  margin-top: 60px;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;  /* Ensure content appears above the background */
+  position: relative;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: transparent;
+  z-index: 1000;
+  height: 70px;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  z-index: 1003;
+  position: relative;
+}
+
+.hamburger-menu .line {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.NavBar_logo {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1002;
+  padding: 10px;
+}
+
+.logo {
+  align-items: center;
+  height: 10vh;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px 0;
+  z-index: 1001;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.nav-links ul li {
+  margin: 10px 0;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: block;
+}
+
+.nav-links ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar.active {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+}
+
+.navbar.active .hamburger-menu .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar.active .hamburger-menu .line:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar.active .hamburger-menu .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media (max-width: 1024px) {
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links ul li {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .NavBar_logo {
+    left: 50%;
+    transform: translateX(-55%);
+  }
+
+  body {
+    background: none;
+    color: #ffffff;
+    font-family: "Rubik Distressed", monospace;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+    height: 110vh;
+    position: relative;
+    z-index: 1;
+  }
+
+  .prev-btn {
+    display: grid;
+    place-items: center;
+    margin-top: 60px;
+  }
+
+  .to-home {
+    text-align: center;
+    gap: 50px;
+    font-size: 18px;
+  }
+}
