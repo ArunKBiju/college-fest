@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celeste'25 - Maintenance Ongoing</title>
+    <link rel="stylesheet" href="maintenance-style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <img src="maintenance-images/logo.png" class="logo">
+        <div class="content">
+            <p>The Website Is Under Maintenance...</p>
+            <h1>We <span>Will Be Back </span>In</h1>
+            <div class="launch-timer">
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            <a href="https://wa.me/+917907829166" target="_blank">
+            <button type="button">Contact Tech Support <img src="maintenance-images/triangle.png" alt=""></button>
+            </a>
+        </div>
+        <img src="maintenance-images/rocket.png" class="rocket">
+    </div>
+
+    <script>
+        var countDownDate = new Date("March 9, 2025 22:10:00").getTime();
+        var x =setInterval(function(){
+            var now = new Date().getTime();
+            var distance  = countDownDate - now;
+
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            if(distance < 0){
+                clearInterval(x);
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+            }
+
+        },1000);
+    </script>
+
+</body>
+</html>
